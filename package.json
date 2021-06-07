@@ -4,7 +4,7 @@
     "description": "Quickly switch between themes.",
     "publisher": "Sandorex",
     "icon": "images/icon.png",
-    "version": "0.1.1",
+    "version": "0.1.2",
     "galleryBanner": {
         "color": "#947500",
         "theme": "dark"
@@ -33,7 +33,7 @@
         "onCommand:themeSwitcher.nextTheme",
         "onCommand:themeSwitcher.previousTheme"
     ],
-    "main": "./out/src/extension",
+    "main": "./out/main",
     "contributes": {
         "commands": [
             {
@@ -88,16 +88,18 @@
         }
     },
     "scripts": {
-        "vscode:prepublish": "npm run compile",
-        "compile": "tsc -p ./",
-        "watch": "tsc -watch -p ./",
-        "postinstall": "node ./node_modules/vscode/bin/install",
-        "test": "npm run compile && node ./node_modules/vscode/bin/test"
+        "vscode:prepublish": "npm run -S esbuild-base -- --minify",
+        "esbuild-base": "esbuild ./src/extension.ts --bundle --outfile=out/main.js --external:vscode --format=cjs --platform=node",
+        "esbuild": "npm run -S esbuild-base -- --sourcemap",
+        "esbuild-watch": "npm run -S esbuild-base -- --sourcemap --watch",
+        "test-compile": "tsc -p ./",
+        "package": "vsce package"
     },
     "devDependencies": {
-        "@types/node": "^7.0.43",
+        "@types/node": "^7.10.14",
         "@types/vscode": "^1.16.0",
-        "typescript": "^2.5.2"
+        "esbuild": "^0.12.6",
+        "typescript": "^2.9.2"
     },
     "dependencies": {
         "vsce": "^1.57.1"
