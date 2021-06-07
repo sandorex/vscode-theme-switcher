@@ -4,7 +4,7 @@
     "description": "Quickly switch between themes.",
     "publisher": "Sandorex",
     "icon": "images/icon.png",
-    "version": "0.1.2",
+    "version": "0.1.3",
     "galleryBanner": {
         "color": "#947500",
         "theme": "dark"
