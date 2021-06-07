@@ -1,2 +1,0 @@
-publish:
-	vsce publish

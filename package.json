@@ -4,7 +4,7 @@
     "description": "Quickly switch between themes.",
     "publisher": "Sandorex",
     "icon": "images/icon.png",
-    "version": "0.1.0",
+    "version": "0.1.1",
     "galleryBanner": {
         "color": "#947500",
         "theme": "dark"
@@ -96,8 +96,8 @@
     },
     "devDependencies": {
         "@types/node": "^7.0.43",
-        "typescript": "^2.5.2",
-        "vscode": "^1.1.30"
+        "@types/vscode": "^1.16.0",
+        "typescript": "^2.5.2"
     },
     "dependencies": {
         "vsce": "^1.57.1"

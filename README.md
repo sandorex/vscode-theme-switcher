@@ -1,4 +1,5 @@
-# Theme switcher
+# Quick Theme Switcher
+(This is a fork of [this extension](https://github.com/JanBN/vscode-theme-switcher))
 
 Switch between themes using keyboard shortcuts.
 You can switch between all installed themes or between themes defined in settings.
