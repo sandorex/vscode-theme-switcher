@@ -38,11 +38,11 @@
         "commands": [
             {
                 "command": "themeSwitcher.nextSelectedTheme",
-                "title": "Next Theme (from separate list in config)"
+                "title": "Next Theme (from the list in config)"
             },
             {
                 "command": "themeSwitcher.previousSelectedTheme",
-                "title": "Previous Theme (from separate list in config)"
+                "title": "Previous Theme (from the list in config)"
             },
             {
                 "command": "themeSwitcher.nextTheme",
